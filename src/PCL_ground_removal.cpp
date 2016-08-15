@@ -1,4 +1,4 @@
-#include "PCL_ground_removal.h"
+#include "headers/PCL_ground_removal.h"
 
 // Initiating and declaring global variables.
 ros::Publisher pub;
