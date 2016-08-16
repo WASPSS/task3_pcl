@@ -82,6 +82,7 @@ void mySigintHandler(int sig){
 }
 
 
+
 int main (int argc, char** argv){
  system("rosparam load ~/catkin_ws/src/turtlebot_object_detection/parameters/PCL_object_clustering.yaml /PCL_object_clustering");
  ros::init (argc, argv, "PCL_object_clustering", ros::init_options::NoSigintHandler);
