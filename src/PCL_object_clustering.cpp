@@ -77,14 +77,14 @@ void mySigintHandler(int sig){
  ros::param::set("/PCL_object_clustering/cluster_size/min",cluster_size_min);
  ros::param::set("/PCL_object_clustering/cluster_size/max",cluster_size_max);
  ros::param::set("/PCL_object_clustering/clusters_highest_point",clusters_highest_point);
- system("rosparam dump -v ~/catkin_ws/src/turtlebot_object_detection/parameters/PCL_object_clustering.yaml /PCL_object_clustering");
+ system("rosparam dump -v ~/catkin_ws/src/task3_pcl/parameters/PCL_object_clustering.yaml /PCL_object_clustering");
  ros::shutdown();
 }
 
 
 
 int main (int argc, char** argv){
- system("rosparam load ~/catkin_ws/src/turtlebot_object_detection/parameters/PCL_object_clustering.yaml /PCL_object_clustering");
+ system("rosparam load ~/catkin_ws/src/task3_pcl/parameters/PCL_object_clustering.yaml /PCL_object_clustering");
  ros::init (argc, argv, "PCL_object_clustering", ros::init_options::NoSigintHandler);
  ros::NodeHandle nh;
 

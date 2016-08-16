@@ -48,14 +48,14 @@ void mySigintHandler(int sig){
   ros::param::set("/PCL_subsampler/voxel_grid/leaf_size", voxel_leaf_size);
   ros::param::set("/PCL_subsampler/statistical_outlier_removal/mean_k", sor_mean_k);
   ros::param::set("/PCL_subsampler/statistical_outlier_removal/stddev_mult_thresh", sor_stdev_thresh);
-  system("rosparam dump -v ~/catkin_ws/src/turtlebot_point_cloud_subsampler/paramerters/PCL_subsampler.yaml /PCL_subsampler");
+  system("rosparam dump -v ~/catkin_ws/src/task3_pcl/parameters/PCL_subsampler.yaml /PCL_subsampler");
   ros::shutdown();
 }
 
 int main (int argc, char** argv)
 {
   // Initialize ROS
-  system("rosparam load ~/catkin_ws/src/turtlebot_point_cloud_subsampler/paramerters/PCL_subsampler.yaml /PCL_subsampler");
+  system("rosparam load ~/catkin_ws/src/task3_pcl/parameters/PCL_subsampler.yaml /PCL_subsampler");
   ros::init (argc, argv, "PCL_subsampler", ros::init_options::NoSigintHandler);
   ros::NodeHandle nh;
 

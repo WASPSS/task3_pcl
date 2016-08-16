@@ -38,13 +38,13 @@ void mySigintHandler(int sig){
  ros::param::set("/PCL_ground_removal/pass_through/max", pass_through_max);
  ros::param::set("/PCL_ground_removal/statistical_outlier_removal/mean_k", sor_mean_k);
  ros::param::set("/PCL_ground_removal/statistical_outlier_removal/stddev_mult_thresh", sor_stdev_thresh);
- system("rosparam dump -v ~/catkin_ws/src/turtlebot_object_detection/parameters/PCL_ground_removal.yaml /PCL_ground_removal");
+ system("rosparam dump -v ~/catkin_ws/src/task3_pcl/parameters/PCL_ground_removal.yaml /PCL_ground_removal");
  ros::shutdown();
 }
 
 int main (int argc, char** argv){
  // Load all parameters from PCL_ground_removal.yaml
- system("rosparam load ~/catkin_ws/src/turtlebot_object_detection/parameters/PCL_ground_removal.yaml /PCL_ground_removal");
+ system("rosparam load ~/catkin_ws/src/task3_pcl/parameters/PCL_ground_removal.yaml /PCL_ground_removal");
  // Initialize ROS with NoSigintHandler
  ros::init (argc, argv, "PCL_ground_removal", ros::init_options::NoSigintHandler);
  ros::NodeHandle nh;
