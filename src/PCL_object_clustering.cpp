@@ -50,7 +50,7 @@ void cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg){
    if(max_point.z < clusters_highest_point){
     Eigen::Vector4f c;
     pcl::compute3DCentroid(*tmp_cloud, c);
-    object_detecter_2d::object_loc object_loc_msg;
+    wasp_custom_msgs::object_loc object_loc_msg;
     object_loc_msg.ID = 10;
     object_loc_msg.point.x = c(0);
     object_loc_msg.point.y = c(1);
@@ -95,7 +95,7 @@ int main (int argc, char** argv){
 
  // Create a ROS publisher for the output point cloud and coordinates of object
  pub_debug_pcl = nh.advertise<sensor_msgs::PointCloud2> ("/camera/depth/object_clusters", 1);
- pub_centroid = nh.advertise<object_detecter_2d::object_loc> ("/object_location", 1);
+ pub_centroid = nh.advertise<wasp_custom_msgs::object_loc> ("/object_location", 1);
  //xyz_pub = nh.advertise<std_msgs::Float32MultiArray> ("/PCL_woden_shape_recognition", 1);
 
  // Spin
