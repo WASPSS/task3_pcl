@@ -29,6 +29,6 @@ target_link_libraries(PCL_transform ${catkin_LIBRARIES})
 add_executable(PCL_ground_removal src/PCL_ground_removal.cpp)
 target_link_libraries(PCL_ground_removal ${catkin_LIBRARIES})
 
-add_dependencies(PCL_object_clustering wasp_custom_msgs)
 add_executable(PCL_object_clustering src/PCL_object_clustering.cpp)
+add_dependencies(PCL_object_clustering wasp_custom_msgs)
 target_link_libraries(PCL_object_clustering ${catkin_LIBRARIES})
