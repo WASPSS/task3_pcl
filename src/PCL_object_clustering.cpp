@@ -51,7 +51,7 @@ void cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg){
     Eigen::Vector4f c;
     pcl::compute3DCentroid(*tmp_cloud, c);
     wasp_custom_msgs::object_loc object_loc_msg;
-    object_loc_msg.ID = 10;
+    object_loc_msg.ID = 200;
     object_loc_msg.point.x = c(0);
     object_loc_msg.point.y = c(1);
     object_loc_msg.point.z = c(2);
