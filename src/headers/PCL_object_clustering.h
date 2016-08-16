@@ -4,7 +4,7 @@
 #include <signal.h>
 #include "std_msgs/Float32MultiArray.h"
 #include <Eigen/Core>
-#include <object_detecter_2d/object_loc.h>
+#include <wasp_custom_msgs/object_loc.h>
 #include <sensor_msgs/PointCloud2.h>
 // PCL specific includes
 #include <pcl_conversions/pcl_conversions.h>
