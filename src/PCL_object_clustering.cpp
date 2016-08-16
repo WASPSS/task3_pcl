@@ -50,7 +50,6 @@ void cloud_cb (const sensor_msgs::PointCloud2ConstPtr& cloud_msg){
    if(max_point.z < clusters_highest_point){
     Eigen::Vector4f c;
     pcl::compute3DCentroid(*tmp_cloud, c);
-    //std::cout << "Centroid is " << c << std::endl;
     object_detecter_2d::object_loc object_loc_msg;
     object_loc_msg.ID = 10;
     object_loc_msg.point.x = c(0);
